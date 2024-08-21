@@ -1,0 +1,53 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.flex-container{
+    display: flex;
+    /* ? Turns flexbox on- must be done on parent container */
+    /* flex-direction: row; doesnt do anything cause we are already in row */
+    /* flex-direction: row-reverse; flips the row backwards right*/
+    /* flex-direction: column; puts it back in colums but the axis flips */
+    /* flex-direction: column-reverse; flips the colums */
+    /* flex-direction specifies main axis, main start, and main end */
+    flex-direction: row;
+
+    /* ? Handles overflow */
+    flex-wrap: wrap;
+
+    /*? Handles flow along the main axis */
+    /* justify-content: center; */
+
+    /* ? handles flow along the cross axis */
+    /* align-items: stretch; */
+
+    /* ? */
+    gap: 2em;
+    
+
+    background-color: lightgray;
+    width: 50vw;
+    height: 50vh;
+}
+.flex-items{
+    background-color: rebeccapurple;
+    width: 50px;
+    height: 50px;
+    margin: 3px;
+    color: white;
+}
+.flex-items:nth-child(4){
+    order: -3;
+    /* ?changed the order of element laid out in html */
+}
+.flex-items:nth-child(1){
+    flex-grow: 3;
+    /* ?changed the presets sizing */
+    align-self: flex-start;
+    /* ?changes the cross axis of a single element */
+}
+
+.flex-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
